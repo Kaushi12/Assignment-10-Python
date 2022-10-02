@@ -1,0 +1,5 @@
+1) __getattribute__ has a default implementation, but __getattr__ does not. This has a clear meaning: since __getattribute__ has a default implementation, while __getattr__ not, clearly python encourages users to implement __getattr__ .
+
+2) Descriptors are a powerful, general purpose protocol. They are the mechanism behind properties, methods, static methods, class methods, and super() . They are used throughout Python itself. Descriptors simplify the underlying C code and offer a flexible set of new tools for everyday Python programs.The most accessible technique is to use the property function to define get, set and delete methods associated with an attribute name. The property function builds descriptors for you. A slightly less accessible, but more extensible and reusable technique is to define descriptor classes yourself.
+
+3)So, the difference between __getattribute__() and __getattr__() is that the first one is called unconditionally when an attribute is being retrieved from an instance while the second is called only when the attribute was not found.
